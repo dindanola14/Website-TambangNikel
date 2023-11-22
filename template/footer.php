@@ -12,7 +12,7 @@
     <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        $('#table').DataTable( {
+        $('#table_laporan').DataTable( {
             dom: 'Bfrtip',
             buttons: [
                 'copy', 'csv', 'excel', 'pdf', 'print'
@@ -20,11 +20,14 @@
         } );
     } );
     $(document).ready(function() {
-        $('#table_barang').DataTable( {} );
         $('#table_admin').DataTable( {} );
-        $('#table_manajer').DataTable( {} );
-        $('#table_kasir').DataTable( {} );
-        $('#table_meja').DataTable( {} );
+        $('#table_penyetuju').DataTable( {} );
+        $('#table_kendaraan').DataTable( {} );
+        $('#table_driver').DataTable( {} );
+        $('#table_bbm').DataTable( {} );
+        $('#table_booking').DataTable( {} );
+        $('#table_status').DataTable( {} );
+        $('#table_kembali').DataTable( {} );
     } );
     </script>
 

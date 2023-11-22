@@ -2,7 +2,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$dbname = "kasir_cafe";
+$dbname = "tambang_nikel";
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 if (!$conn){

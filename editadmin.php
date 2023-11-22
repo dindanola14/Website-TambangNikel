@@ -20,7 +20,7 @@ if(isset($_POST['update']))
     if(!$result){
         echo "
         <div class='alert alert-danger alert-dismissible fade show' role='alert'>
-        <strong>NOOO!</strong> data gagal di update.
+        <strong>NOOO!</strong> Data gagal di update.
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
         <span aria-hidden='true'>&times;</span>
         </button>
@@ -29,7 +29,7 @@ if(isset($_POST['update']))
         } else{
         echo "
         <div class='alert alert-success alert-dismissible fade show' role='alert'>
-        <strong>YESSS!</strong> data berhasil di update.
+        <strong>YESSS!</strong> Data berhasil di update.
         <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
         <span aria-hidden='true'>&times;</span>
         </button>
@@ -44,7 +44,7 @@ $result = mysqli_query($conn, "SELECT * FROM admin WHERE id_admin=$id_admin");
 while($data = mysqli_fetch_array($result))
 {
     $id_admin = $data['id_admin'];
-    $nama_toko = $data['nama_toko'];
+    $nama_perusahaan = $data['nama_perusahaan'];
     $user = $data['user'];
     $pass = $data['pass'];
     $alamat = $data['alamat'];
@@ -61,12 +61,12 @@ while($data = mysqli_fetch_array($result))
             <div class="form-row">
             <div class="form-group col-md-6">
                 <input type="hidden" name="id_admin" value="<?php echo $_GET['id'] ?>">
-                <label><b>Id Admin</b></label>
+                <label><b>ID Admin</b></label>
                 <input type="text" class="form-control" value="<?php echo $id_admin ?>" readonly>
                 </div>
             <div class="form-group col-md-6">
-                <label><b>Nama Toko</b></label>
-                <input type="text" name="nama_toko" class="form-control"  value="<?php echo $nama_toko;?>" readonly>
+                <label><b>Nama Perusahaan</b></label>
+                <input type="text" name="nama_perusahaan" class="form-control"  value="<?php echo $nama_perusahaan;?>" readonly>
                 </div>
                 <div class="form-group col-md-6">
                 <label><b>Username</b></label>
@@ -81,7 +81,7 @@ while($data = mysqli_fetch_array($result))
                 <input type="text" name="alamat" class="form-control" value="<?php echo $alamat;?>" required>
                 </div>
                 <div class="form-group col-md-6">
-                <label><b>Telepon</b></label>
+                <label><b>No. Telepon</b></label>
                     <div class="input-group">
                         <input type="text" name="telp" class="form-control" value="<?php echo $telp;?>" required>
                         <div class="input-group-append">

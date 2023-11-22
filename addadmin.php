@@ -2,13 +2,13 @@
 <?php 
 if(!empty($_POST['add_admin'])){
     $id_admin = $_POST['id_admin'];
-    $nama_toko = $_POST['nama_toko'];
+    $nama_perusahaan = $_POST['nama_perusahaan'];
     $user = $_POST['user'];
     $pass = $_POST['pass'];
     $alamat = $_POST['alamat'];
     $telp = $_POST['telp'];
     
-    mysqli_query($conn,"insert into admin values('','$nama_toko','$user','$pass','$alamat','$telp')")
+    mysqli_query($conn,"insert into admin values('','$nama_perusahaan','$user','$pass','$alamat','$telp')")
     or die(mysqli_error($conn));
     echo '<script>window.location="addadmin.php"</script>';
 }
@@ -27,8 +27,8 @@ if(!empty($_POST['add_admin'])){
             <form method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                    <label><b>Nama Toko</b></label>
-                    <input type="text" name="nama_toko" class="form-control"  value="<?php echo $nama_toko;?>" readonly>
+                    <label><b>Nama Perusahaan</b></label>
+                    <input type="text" name="nama_perusahaan" class="form-control"  value="<?php echo $nama_perusahaan;?>" readonly>
                     </div>
                     <div class="form-group col-md-6">
                     <label><b>Username</b></label>
@@ -43,7 +43,7 @@ if(!empty($_POST['add_admin'])){
                     <input type="text" name="alamat" class="form-control" required>
                     </div>
                     <div class="form-group col-md-6">
-                    <label><b>Telp</b></label>
+                    <label><b>No. Telepon</b></label>
                     <div class="input-group">
                     <input type="text" name="telp" class="form-control" required>
                     <div class="input-group-append">
@@ -75,7 +75,7 @@ if(!empty($_POST['add_admin'])){
                     <th>Username</th>
                     <th>Password</th>
                     <th>Alamat</th>
-                    <th>Telepon</th>
+                    <th>No. Telepon</th>
                     <th>Opsi</th>
                 </tr>
             </thead>

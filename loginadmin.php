@@ -13,7 +13,7 @@
             $_SESSION['status'] = "login";
             echo '<script>alert("Login Sukses");window.location="indexadmin.php"</script>';
         }else{
-            echo '<script>alert("Maaf! data yang anda masukan salah.");history.go(-1);</script>';
+            echo '<script>alert("Maaf! Data yang anda masukan salah.");history.go(-1);</script>';
         }
 	}
     if(isset($_SESSION['status']))
@@ -23,9 +23,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="cafe.png">
+<link rel="icon" href="logo-tambangnikel.png">
     <link rel="icon" href="icon.ico" type="image/ico">
-  <title>Login Admin | Cafe Telkom</title>
+  <title>Login Admin | Tambang Nikel</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -44,12 +44,12 @@
             <div class="card-body">
                 <div class="brand-logo">
                 <center>
-                <img src="cafe.png" height="80" width="max-80" alt="logo">
+                <img src="logo-tambangnikel.png" height="80" width="max-80" alt="logo">
                 </center>
               </div>
               <center>
               <div class="mt-3"></div>
-              <h4>Cafe Telkom</h4>
+              <h4><font style = font-weight:bold;>PT. Tambang Nikel<font></h4>
             </center>
             <div class="mt-3"></div>
                 <form method="POST">
@@ -65,8 +65,7 @@
             </div>
         </div>
         <div class="mt-4 text-white">
-                    <td colspan="2"><center><h10>Apakah anda seorang Manajer? Login <a href="loginmanajer.php">disini<h10></a></center></td>
-                    <td colspan="2"><center><h10>Apakah anda seorang Kasir? Login <a href="loginkasir.php">disini<h10></a></center></td>
+                    <td colspan="2"><center><h10>Apakah anda seorang Penyetuju? Login <a href="loginpenyetuju.php">disini<h10></a></center></td>
               </div>
     </div>
 

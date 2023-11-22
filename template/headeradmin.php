@@ -8,10 +8,10 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Cafe Telkom</title>
+  <title>PT. Tambang Nikel</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="cafe.png">
+  <link rel="icon" href="logo-tambangnikel.png">
   <link rel="icon" href="icon.ico" type="image/ico">
   <link href="assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -51,12 +51,12 @@ button.buttons-html5{
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-purple text-white shadow-sm sticky-top d-md-none d-lg-none d-xl-none">
-  <a class="navbar-brand"><i class="fa fa-coffee mr-1"></i><b>
+  <a class="navbar-brand"><i class="fas fa-hammer mr-1"></i><b>
   <?php 
-      $toko = mysqli_query($conn,"SELECT * FROM admin ORDER BY nama_toko ASC");
-      while($dat = mysqli_fetch_array($toko)){
-        $nama_toko = $dat['nama_toko'];
-        echo "$nama_toko";
+      $perusahaan = mysqli_query($conn,"SELECT * FROM admin ORDER BY nama_perusahaan ASC");
+      while($dat = mysqli_fetch_array($perusahaan)){
+        $nama_perusahaan = $dat['nama_perusahaan'];
+        echo "$nama_perusahaan";
       }
           ?></b></a>
   <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,17 +64,32 @@ button.buttons-html5{
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
-          <!-- <li class="nav-item">
-              <a class="nav-link putih" href="index.php"><i class="fa fa-desktop mr-2"></i>Kasir</a>
-          </li> -->
+          <li class="nav-item">
+              <a class="nav-link putih" href="indexadmin.php"><i class="fa fa-desktop mr-2"></i>Dashboard</a>
+          </li>
           <li class="nav-item">
               <a class="nav-link putih" href="addadmin.php"><i class="fas fa-user-cog mr-2"></i>Admin</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link putih" href="addmanajer.php"><i class="fas fa-user-edit mr-2"></i>Manajer</a>
+              <a class="nav-link putih" href="penyetuju.php"><i class="fas fa-user-alt mr-2"></i>Penyetuju</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link putih" href="addkasir.php"><i class="fas fa-user-alt mr-2"></i>Kasir</a>
+              <a class="nav-link putih" href="kendaraan.php"><i class="fas fa-truck mr-2"></i>Kendaraan</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link putih" href="driver.php"><i class="fas fa-id-card mr-2"></i>Driver</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link putih" href="bbm.php"><i class="fas fa-gas-pump mr-2"></i>BBM</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link putih" href="addbooking.php"><i class="fas fa-map-marked-alt mr-2"></i>Booking</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link putih" href="status.php"><i class="far fa-frown mr-2"></i>Status</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link putih" href="kembali.php"><i class="fas fa-ban mr-2"></i>Kembali</a>
           </li>
           <!-- <li class="nav-item">
               <a class="nav-link putih" href="laporanmanajer.php"><i class="fa fa-table mr-2"></i>Laporan</a>
@@ -90,13 +105,13 @@ button.buttons-html5{
 </nav>
 
 <div class="bg-purple text-center py-2 shadow-sm sticky-top d-none d-md-block">
-<a class="navbar-brand text-white"><i class="fa fa-coffee mr-1"></i><b>
+<a class="navbar-brand text-white"><i class="fas fa-hammer mr-1"></i><b>
   <?php 
-      $toko = mysqli_query($conn,"SELECT * FROM admin ORDER BY nama_toko ASC");
-      while($dat = mysqli_fetch_array($toko)){
-        $nama_toko = $dat['nama_toko'];
+      $perusahaan = mysqli_query($conn,"SELECT * FROM admin ORDER BY nama_perusahaan ASC");
+      while($dat = mysqli_fetch_array($perusahaan)){
+        $nama_perusahaan = $dat['nama_perusahaan'];
         $userr = $dat['user'];
-        echo "$nama_toko";
+        echo "$nama_perusahaan";
       }
           ?></b></a>
 </div>
@@ -113,17 +128,32 @@ button.buttons-html5{
             </div>
             <div class="card-body">
               <ul class="navbar-nav">
-                  <!-- <li class="nav-item">
-                      <a class="nav-link" href="index.php"><i class="fa fa-desktop text-purple mr-2"></i>Kasir</a>
-                  </li> -->
+                  <li class="nav-item">
+                      <a class="nav-link" href="indexadmin.php"><i class="fa fa-desktop text-purple mr-2"></i>Dashboard</a>
+                  </li>
                   <li class="nav-item">
                       <a class="nav-link" href="addadmin.php"><i class="fas fa-user-cog text-purple mr-2"></i>Admin</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="addmanajer.php"><i class="fas fa-user-edit text-purple mr-2"></i>Manajer</a>
+                      <a class="nav-link" href="penyetuju.php"><i class="fas fa-user-alt text-purple mr-2"></i>Penyetuju</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="addkasir.php"><i class="fas fa-user-alt text-purple mr-2"></i>Kasir</a>
+                      <a class="nav-link" href="kendaraan.php"><i class="fas fa-truck text-purple mr-2"></i>Kendaraan</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="driver.php"><i class="fas fa-id-card text-purple mr-2"></i>Driver</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="bbm.php"><i class="fas fa-gas-pump text-purple mr-2"></i>BBM</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="addbooking.php"><i class="fas fa-map-marked text-purple mr-2"></i>Booking</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="status.php"><i class="far fa-frown text-purple mr-2"></i>Status</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="kembali.php"><i class="fas fa-ban text-purple mr-2"></i>Kembali</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="pengaturanadmin.php"><i class="fa fa-cog text-purple mr-2"></i>Pengaturan</a>
